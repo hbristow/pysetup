@@ -62,7 +62,7 @@ Now that the core numeric library, `numpy`, has been installed, a number of usef
 
 ### Test
 
-To test whether numpy has successfully built against OpenBLAS, boot up `ipython`:
+To test whether numpy has successfully built against OpenBLAS, boot up the new interpreter you just installed:
 
     ipython
     
