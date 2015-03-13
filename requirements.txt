@@ -14,4 +14,3 @@ matplotlib   # plotting
 networkx     # graph data structures
 pandas       # statistical data structures
 pyfftw       # fastest Fourier transform in the west
-scikit-learn # machine learning
