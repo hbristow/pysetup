@@ -36,14 +36,14 @@ PIP is the de facto package manager for Python. It installs packages from the Py
 
 Now that we have FFTW and OpenBLAS, we want to build numpy against these libraries. A setup configuration is provided here:
 
-    curl -fsSL https://raw.githubusercontent.com/hbristow/cvsetup/master/.numpy-site.cfg > ~
+    curl -fsSL https://raw.githubusercontent.com/hbristow/cvsetup/master/.numpy-site.cfg > ~/.numpy-site.cfg
     
-Note, that this file *must* be written to your home directory with the given name. It tells the installer where to look for FFTW and OpenBLAS. Next, install numpy using PIP. The `--use-no-wheel` option forces it to be build from source. The `-march=native` flag passed to Clang will enable the full feature suite of your processor (SSE, AVX, etc):
+Note, this file *must* be written to your home directory with the given name. It tells the installer where to look for FFTW and OpenBLAS. Next, install numpy using `pip`. The `--use-no-wheel` option forces it to be build from source. The `-march=native` flag passed to Clang will enable the full feature suite of your processor (SSE, AVX, etc):
 
     CFLAGS="-march=native" pip install --no-use-wheel numpy
     
 ### Python Packages
 
-This repository contains `requirements.txt` which describes the desired packages and how to install them. PIP can install all of these packages and their dependencies in one fell swoop:
+Now that the core numeric library, `numpy`, has been installed, a number of useful companion packages can be installed. `pip` can install all of these packages and their dependencies in one fell swoop:
 
     pip install -r https://raw.githubusercontent.com/hbristow/cvsetup/master/requirements.txt
