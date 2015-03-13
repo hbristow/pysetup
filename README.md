@@ -21,12 +21,12 @@ Homebrew is a package manager for the mac that provides Python package dependenc
     This also installs pip, the package manager, which will be used to install the Python packages.
 
 2.  **Install OpenBlas**  
-    OpenBlas is a fast BLAS and LAPACK implementation that rivals Intel's MKL for speed. We'll use it as a backend for Python's numeric library, `numpy`. Again, build from source to get the maximum performance:
+    OpenBlas is a fast BLAS and LAPACK implementation that rivals Intel's MKL for speed. We'll use it as a backend for Python's numeric library, `numpy`. It's best to build it from source on your architecture for optimal speed:
     
         brew install homebrew/science/openblas --build-from-source 
 
 3.  **Install FFTW3 (Optional)**  
-    FFTW is a library for performing Fast Fourier Transforms. We'll install a Python wrapper for it, but first we need the C library. It's best to build it from source on your architecture for optimal speed:
+    FFTW is a library for performing Fast Fourier Transforms. We'll install a Python wrapper for it, but first we need the C library. Again, build from source to get the maximum performance:
     
         brew install fftw --build-from-source
 
