@@ -58,3 +58,17 @@ Next, install numpy using `pip`. The `--use-no-wheel` option forces it to be bui
 Now that the core numeric library, `numpy`, has been installed, a number of useful companion packages can be installed. I've put together a concise list in `requirements.txt`. `pip` can install all of these packages and their dependencies in one fell swoop:
 
     pip install -r https://raw.githubusercontent.com/hbristow/cvsetup/master/requirements.txt
+
+
+### Test
+
+To test whether numpy has successfully built against OpenBLAS, boot up `ipython`:
+
+    ipython
+    
+Then import numpy and display the config:
+
+    import numpy
+    numpy.show_config()
+    
+This should contain information about paths to BLAS and LAPACK and, importantly, make mention of OpenBLAS if indeed it was found.
