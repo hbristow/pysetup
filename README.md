@@ -4,7 +4,7 @@ A short guide to setting up a Python environment for Computer Vision (CV) on a M
 
 ### Introduction
 
-This guide is designed to help you get a Python environment up and running for scientific computing and numerics. It does not provide particular packages for computer vision tasks, but rather the package base to get started from. Numeric computing in Python is reliant on `numpy` with a fast backend. This guide puts a particular focus on getting that bit right.
+This guide is designed to help you get a Python environment up and running for scientific computing and numerics. It does not provide particular packages for computer vision tasks, but rather the package base to get started from. Effective numeric computing in Python is reliant on `numpy` with a fast backend. This guide puts a particular focus on getting that bit right.
 
 
 ### Homebrew
