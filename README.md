@@ -1,10 +1,10 @@
 # Python Setup for Computer Vision
-A short guide to setting up a Python environment for Computer Vision (CV) on a Mac
+A short guide to setting up a Python environment for scientific computing on a Mac
 
 
 ### Introduction
 
-This guide is designed to help you get a Python environment up and running for scientific computing and numerics. It does not provide particular packages for computer vision tasks, but rather the package base to get started from. Effective numeric computing in Python is reliant on `numpy` with a fast backend. This guide puts a particular focus on getting that bit right.
+This guide is designed to help you get a Python environment up and running for scientific computing and numerics. It does not provide particular packages for domain specific tasks, but rather the package base to get started from. Effective numeric computing in Python is reliant on `numpy` with a fast backend. This guide puts a particular focus on getting that bit right.
 
 
 ### Homebrew
@@ -14,7 +14,7 @@ Homebrew is a package manager for the mac that provides Python package dependenc
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 1.  **Install Python**  
-    It's often a good idea to keep keep your Python environment separate to what the system requires, so we'll install an updated version of Python using brew:
+    It's potentially a good idea to keep your Python environment separate to what the system requires, so we'll install an updated version of Python using brew:
     
         brew install python
     
@@ -42,13 +42,13 @@ PIP is the de facto package manager for Python. It installs packages from the Py
 
 ### Numpy Setup
 
-Now that we have FFTW and OpenBLAS, we want to build numpy against these libraries. A setup configuration is provided here:
+Now that we have OpenBLAS and (optionally) FFTW, we want to build numpy against these libraries. The configuration is provided in `.numpy-site.cfg` and can be downloaded automatically into place with:
 
     curl -fsSL https://raw.githubusercontent.com/hbristow/cvsetup/master/.numpy-site.cfg > ~/.numpy-site.cfg
     
-Note, this file *must* be written to your home directory with the given name. It tells the installer where to look for FFTW and OpenBLAS.
+Note, this file *must* be written to your home directory with the given name.
 
-Next, install numpy using `pip`. The `--use-no-wheel` option forces it to be build from source. The `-march=native` flag passed to Clang will enable the full feature suite of your processor (SSE, AVX, etc):
+Next, install numpy using `pip`. The `--use-no-wheel` option forces it to be built from source. The `-march=native` flag passed to Clang will enable the full feature suite of your processor (SSE, AVX, etc):
 
     CFLAGS="-march=native" pip install --no-use-wheel numpy
 
