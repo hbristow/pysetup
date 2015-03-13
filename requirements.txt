@@ -1,15 +1,17 @@
-setuptools  # packaging
-Cython      # C++ extension compiler
-ipython     # an improved python interpreter
+setuptools   # packaging
+Cython       # C++ extension compiler
+ipython[all] # an improved python interpreter
 
-six         # Python 2/3 compatibility layer
-Pillow      # PIL compatibility layer
-decorator   # common decorator patterns
+six          # Python 2/3 compatibility layer
+pillow       # PIL compatibility layer
+decorator    # common decorator patterns
+nose         # unit tests
 
-numpy       # numeric manipulation
-scipy       # scientific
-matplotlib  # plotting
-networkx    # graph library
-pyFFTW      # fastest Fourier transform in the west
-
-nose        # unit tests
+numpy        # numerics
+sympy        # symbolic
+scipy        # scientific
+matplotlib   # plotting
+networkx     # graph data structures
+pandas       # statistical data structures
+pyfftw       # fastest Fourier transform in the west
+scikit-learn # machine learning
